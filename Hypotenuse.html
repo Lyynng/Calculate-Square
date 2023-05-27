@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BÀI 14</title>
+    <link rel="stylesheet" href="style3.css" type="text/css">
+    <script lang="Javascript" type="text/javascript">
+      function CanhHuyen(){
+        var canhA = eval(document.getElementById("canhA").value);
+        var canhB = eval(document.getElementById("canhB").value);
+        var canhhuyen = Math.sqrt((canhA * canhA) + (canhB * canhB));
+        document.getElementById("canhhuyen").value = canhhuyen;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="top" id="text">CẠNH HUYỀN TAM GIÁC VUÔNG</td>
+      </tr>
+      <tr>
+        <td>Cạnh A:</td>
+        <td>
+          <input type="number" name="a" id="canhA" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Cạnh B:</td>
+        <td>
+          <input type="number" name="b" id="canhB" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Cạnh huyền:</td>
+        <td>
+          <input type="number" name="c" id="canhhuyen" disabled>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="top">
+          <input type="button" value="Tính" onclick="CanhHuyen()">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

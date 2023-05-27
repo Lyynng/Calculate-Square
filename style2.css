@@ -1,0 +1,22 @@
+table{
+  width: 400px;
+  border: 1px solid;
+  margin: auto;
+}
+.central{
+  text-align: center;
+}
+#TG{
+  font-style: italic;
+  background-color: orange;
+}
+#input{
+  background-color: pink;
+  border: 1px solid;
+}
+#KetQua{
+  overflow: hidden;
+  background-color: pink;
+  border: 1px solid;
+  width: 167px;
+}

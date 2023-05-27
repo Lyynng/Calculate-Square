@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BÀI 11</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script lang="Javascript" type="text/javascript">
+      function DientichHCN(){
+        var chieudai = eval(document.getElementById("ChieuDai").value);
+        var chieurong = eval(document.getElementById("ChieuRong").value);
+        var dientich = chieudai * chieurong;
+        document.getElementById("Ketqua").value = dientich;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="central" id="HCN">TÍNH DIỆN TÍCH HÌNH CHỮ NHẬT</td>
+      </tr>
+      <tr>
+        <td>Chiều dài</td>
+        <td>
+          <input type="number" name="Chieudai" id="ChieuDai" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Chiều rộng</td>
+        <td>
+          <input type="number" name="Chieurong" id="ChieuRong" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Diện tích</td>
+        <td>
+          <input type="number" name="Dientich" id="Ketqua" disabled>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="central">
+          <input type="button" value="Tính" onclick="DientichHCN()">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

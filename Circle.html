@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BÀI 12</title>
+    <link rel="stylesheet" href="style1.css" type="text/css">
+    <script lang="Javascript" type="text/javascript">
+      function DTHT(){
+        var bankinh = eval(document.getElementById("BanKinh").value);
+        var _pi = 3.14;
+        var dientich = bankinh * bankinh * _pi;
+        document.getElementById("KetQua1").value = dientich;
+      }
+      function CVHT(){
+        var bankinh = eval(document.getElementById("BanKinh").value);
+        var _pi = 3.14;
+        var chuvi = 2 * bankinh * _pi;
+        document.getElementById("KetQua2").value = chuvi;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="central" id="HT">DIỆN TÍCH và CHU VI <br>HÌNH TRÒN</td>
+      </tr>
+      <tr>
+        <td>Bán kính:</td>
+        <td>
+          <input type="number" name="bkinh" id="BanKinh" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Diện tích:</td>
+        <td>
+          <input type="number" name="dt" id="KetQua1" disabled>
+        </td>
+      </tr>
+      <tr>
+        <td>Chu vi:</td>
+        <td>
+          <input type="number" name="cv" id="KetQua2" disabled>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="central">
+          <input type="button" value="Tính" onclick="DTHT(), CVHT()">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

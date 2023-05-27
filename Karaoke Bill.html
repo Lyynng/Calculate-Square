@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BÀI 18</title>
+    <link rel="stylesheet" href="style7.css" type="text/css">
+    <script lang="Javascript" type="text/javascript">
+      function ThanhToan(){
+        var GBD = Number(document.getElementById("GBD").value);
+        var GKT = Number(document.getElementById("GKT").value);
+        var ThanhToan = "";
+
+        if(GBD < 10 || GKT < 10 || GBD > 24 || GKT > 24){
+          alert("Quán đang trong thời gian nghỉ");
+        }
+
+        if((GBD >= 10) && (GKT < 17) )
+          ThanhToan += (GKT - GBD) * 20000;
+        
+        else if((GBD >= 17) && (GKT < 24))
+          ThanhToan += (GKT - GBD) * 45000;
+
+        else{
+          ThanhToan += ((17 - GBD) * 20000) + ((23 - GKT) * 45000);
+        }
+        document.getElementById("Result").innerHTML = ThanhToan;
+
+        if(GKT < GBD){
+          alert("Giờ kết thúc phải > giờ bắt đầu");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="central" id="banner">TÍNH TIỀN KARAOKE</td>
+      </tr>
+      <tr>
+        <td>Giờ bắt đầu:</td>
+        <td>
+          <input type="number" name="start" id="GBD" required> (h)
+        </td>
+      </tr>
+      <tr>
+        <td>Giờ kết thúc:</td>
+        <td>
+          <input type="number" name="end" id="GKT" required> (h)
+        </td>
+      </tr>
+      <tr>
+        <td>Tiền thanh toán:</td>
+        <td>
+          <div id="Result">
+            <input type="number" name="money" id="input" disabled>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="central">
+          <input type="button" value="Tính tiền" onclick="ThanhToan()" 
+          onchange="ThanhToan()">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

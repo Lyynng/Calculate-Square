@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BÀI 13</title>
+    <link rel="stylesheet" href="style2.css" type="text/css">
+    <script lang="Javascript" type="text/javascript">
+      function NDTG()
+      {
+        var canh1 = Number(document.getElementById("canh1").value);
+        var canh2 = Number(document.getElementById("canh2").value);
+        var canh3 = Number(document.getElementById("canh3").value);
+        Canh1 = Math.pow(canh1,2);
+        Canh2 = Math.pow(canh2,2);
+        Canh3 = Math.pow(canh3,2);
+
+        if((Canh1 + Canh2==Canh3)||(Canh1 + Canh3 == Canh2)||(Canh2 + Canh3 == Canh1)){
+          document.getElementById("KetQua").innerHTML = "Tam giác vuông";
+        }
+        else if((canh1 == canh2) && (canh1 == canh3)){
+          document.getElementById("KetQua").innerHTML = "Tam giác đều";
+        }
+        else if((canh1 == canh2) || (canh2 == canh3) || (canh1 == canh3)){
+          document.getElementById("KetQua").innerHTML = "Tam giác cân";
+        }
+        else{
+          document.getElementById("KetQua").innerHTML = "Tam giác thường";
+        }
+      }
+
+      NDTG();
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="central" id="TG">NHẬN DẠNG TAM GIÁC</td>
+      </tr>
+      <tr>
+        <td>Cạnh 1:</td>
+        <td>
+          <input type="number" name="canh1" id="canh1" required> (cm)
+        </td>
+      </tr>
+      <tr>
+        <td>Cạnh 2:</td>
+        <td>
+          <input type="number" name="canh2" id="canh2" required> (cm)
+        </td>
+      </tr>
+      <tr>
+        <td>Cạnh 3:</td>
+        <td>
+          <input type="number" name="canh3" id="canh3" required> (cm)
+        </td>
+      </tr>
+      <tr>
+        <td>Loại tam giác:</td>
+        <td>
+          <div id="KetQua">
+            <input type="text" name="loaitg" id="input" disabled>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="central">
+          <input type="button" value="Nhận dạng" onclick="NDTG()" onchange="NDTG()">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

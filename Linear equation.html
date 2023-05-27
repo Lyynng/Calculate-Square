@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BÀI 15</title>
+    <link rel="stylesheet" href="style4.css" type="text/css">
+    <script lang="Javascript" type="text/javascript">
+      function PTBN(){
+        var Num1 = Number(document.getElementById("Num1").value);
+        var Num2 = Number(document.getElementById("Num2").value);
+        var Ketqua = "";
+
+        if(Num1 == 0 && Num2 == 0)
+          Ketqua += "Vô số nghiệm"
+
+        if(Num1 == 0 && Num2 != 0)
+          Ketqua += "Vô nghiệm"
+        
+        if(Num1 != 0)
+          Ketqua += "x " + "= " + (-Num2/Num1)
+
+        document.getElementById("KetQua").innerHTML = Ketqua;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="top" id="banner">GIẢI PHƯƠNG TRÌNH BẬC NHẤT</td>
+      </tr>
+      <tr>
+        <td>Phương trình:</td>
+        <td>
+          <div>
+            <input type="number" name="num1" id="Num1" required> x +
+            <input type="number" name="num2" id="Num2" required> = 0
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Nghiệm:</td>
+        <td>
+          <div id="KetQua">
+            <input type="text" name="nghiem" id="input" disabled>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="top">
+          <input type="button" value="Giải phương trình" onclick="PTBN()" onchange="PTBN()">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

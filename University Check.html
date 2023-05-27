@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BÀI 17</title>
+    <link rel="stylesheet" href="style6.css" type="text/css">
+    <script lang="Javascript" type="text/javascript">
+      function TongDiem(){
+        var Toan = Number(document.getElementById("Toan").value);
+        var Ly = Number(document.getElementById("Ly").value);
+        var Hoa = Number(document.getElementById("Hoa").value);
+        var TongDiem = Toan + Ly + Hoa;
+        document.getElementById("TongDiem").value = TongDiem;
+      }
+      function KQT(){
+        var Toan = Number(document.getElementById("Toan").value);
+        var Ly = Number(document.getElementById("Ly").value);
+        var Hoa = Number(document.getElementById("Hoa").value);
+        var Diemchuan = Number(document.getElementById("Diemchuan").value);
+        var TongDiem = Toan + Ly + Hoa;
+        if(Toan != 0 && Ly != 0 && Hoa != 0 && TongDiem >= Diemchuan){
+          document.getElementById("Result").innerHTML = "Đậu";
+        }
+        else{
+          document.getElementById("Result").innerHTML = "Rớt";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="central" id="banner">KẾT QUẢ THI ĐẠI HỌC</td>
+      </tr>
+      <tr>
+        <td>Toán:</td>
+        <td>
+          <input type="number" name="math" id="Toan" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Lý:</td>
+        <td>
+          <input type="number" name="physics" id="Ly" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Hóa:</td>
+        <td>
+          <input type="number" name="chems" id="Hoa" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Điểm chuẩn:</td>
+        <td>
+          <input type="number" name="standard" id="Diemchuan" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Tổng điểm:</td>
+        <td>
+          <input type="number" name="num" id="TongDiem" disabled>
+        </td>
+      </tr>
+      <tr>
+        <td>Kết quả thi:</td>
+        <td>
+          <div id="Result">
+            <input type="text" name="kq" id="KetQua" disabled>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="central">
+          <input type="button" value="Xem kết quả" onclick="TongDiem(), KQT()"
+          onchange="TongDiem(), KQT()">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

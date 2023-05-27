@@ -1,0 +1,33 @@
+table{
+  width: 300px;
+  border: 1px solid;
+  margin: auto;
+  background-color: pink;
+}
+.central{
+  text-align: center;
+}
+#banner{
+  background-color: palevioletred;
+  font-family: Lucida Calligraphy;
+  font-weight: bold;
+  color: white;
+}
+td{
+  padding-top: 10px;
+}
+#Diemchuan{
+  color: red;
+}
+#TongDiem{
+  background-color: bisque;
+}
+#KetQua{
+  background-color: bisque;
+  border: 1px solid;
+}
+#Result{
+  overflow: hidden;
+  background-color: bisque;
+  width: 167px;
+}

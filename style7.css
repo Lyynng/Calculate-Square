@@ -1,0 +1,28 @@
+table{
+  width: 400px;
+  border: 1px solid;
+  margin: auto;
+  background-color: aqua;
+}
+.central{
+  text-align: center;
+}
+#banner{
+  background-color: rgb(85, 243, 240);
+  color: white;
+  font-family: Lucida Calligraphy;
+  font-weight: bold;
+}
+td{
+  padding-top: 10px;
+}
+#input{
+  border: 1px solid;
+  background-color: green;
+}
+#Result{
+  overflow: hidden;
+  background-color: green;
+  border: 1px solid;
+  width:168px;
+}

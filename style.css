@@ -1,0 +1,18 @@
+table{
+  width:400px;
+  margin: auto;
+  border:1px solid;
+}
+body{
+  background-color: bisque;
+}
+#Ketqua{
+  background-color: pink;
+}
+.central{
+  text-align: center;
+}
+#HCN{
+  font-weight: bold;
+  background-color: orange;
+}

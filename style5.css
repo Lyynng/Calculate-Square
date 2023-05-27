@@ -1,0 +1,29 @@
+table{
+  width: 300px;
+  border: 1px solid;
+  margin: auto;
+  background-color: pink;
+}
+.top{
+  text-align: center;
+}
+#banner{
+  background-color: palevioletred;
+  font-family: Lucida Calligraphy;
+  font-weight: bold;
+  color: white;
+}
+#DTB, #Ketqua, #HL{
+  background-color:bisque;
+}
+td{
+  padding-top: 10px;
+}
+#Result1, #Result2{
+  overflow: hidden;
+  background-color: bisque;
+  width: 167px;
+}
+#DTB, #Ketqua{
+  border: 1px solid;
+}

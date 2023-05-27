@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BÀI 16</title>
+    <link rel="stylesheet" href="style5.css" type="text/css">
+    <script lang="Javascript" type="text/javascript">
+      function DTB(){
+        var HK1 = Number(document.getElementById("HK1").value);
+        var HK2 = Number(document.getElementById("HK2").value);
+        var DTB = (HK1 + HK2 *2)/3;
+        document.getElementById("DTB").value = DTB;
+      }
+      function KQ(){
+        var HK1 = Number(document.getElementById("HK1").value);
+        var HK2 = Number(document.getElementById("HK2").value);
+        var DTB = (HK1 + HK2 *2)/3;
+
+        if(DTB >= 5){
+          document.getElementById("Result1").innerHTML = "Được lên lớp";
+        }
+        else if(DTB < 5){
+          document.getElementById("Result1").innerHTML = "Ở lại lớp";
+        }
+      }
+      function HL(){
+        var HK1 = Number(document.getElementById("HK1").value);
+        var HK2 = Number(document.getElementById("HK2").value);
+        var DTB = (HK1 + HK2 *2)/3;
+
+        if(DTB >= 8){
+          document.getElementById("Result2").innerHTML = "Giỏi";
+        }
+        else if(DTB >= 6.5 && DTB < 8){
+          document.getElementById("Result2").innerHTML = "Khá";
+        }
+        else if(DTB >= 5 && DTB < 6.5){
+          document.getElementById("Result2").innerHTML = "Trung bình";
+        }
+        else if(DTB < 5){
+          document.getElementById("Result2").innerHTML = "Yếu";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2" class="top" id="banner">KẾT QUẢ HỌC TẬP</td>
+      </tr>
+      <tr>
+        <td>Điểm HK1:</td>
+        <td>
+          <input type="number" name="hk1" id="HK1" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Điểm HK2:</td>
+        <td>
+          <input type="number" name="hk2" id="HK2" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Điểm trung bình:</td>
+        <td>
+          <input type="number" name="dtb" id="DTB" disabled>
+        </td>
+      </tr>
+      <tr>
+        <td>Kết quả:</td>
+        <td>
+          <div id="Result1">
+            <input type="text" name="kq" id="Ketqua" disabled>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Xếp loại học lực:</td>
+        <td>
+          <div id="Result2">
+            <input type="text" name="hl" id="HL" disabled>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="top">
+            <input type="button" value="Xem kết quả" onclick="DTB(), KQ(), HL()"
+            onchange="DTB(), KQ(), HL()">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
